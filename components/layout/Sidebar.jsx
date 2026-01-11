@@ -36,8 +36,8 @@ const Sidebar = ({
           {/* Logo Section */}
           <div className="p-6 border-b border-blue-700/50">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
-                <Shield size={24} className="text-white" />
+              <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg overflow-hidden">
+                <img src="/sonacomsterlogo.png" alt="Sona Comstar" className="w-full h-full object-contain p-1" />
               </div>
               <div>
                 <h1 className="text-xl font-bold tracking-tight text-white">SONACOMSTAR</h1>
@@ -150,8 +150,8 @@ const Sidebar = ({
           {/* Logo Section */}
           <div className="p-6 border-b border-blue-800">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center">
-                <Layout size={24} />
+              <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center overflow-hidden">
+                <img src="/sonacomsterlogo.png" alt="Sona Comstar" className="w-full h-full object-contain p-1" />
               </div>
               <div>
                 <h1 className="text-xl font-bold tracking-tight text-white">SONACOMSTAR</h1>
