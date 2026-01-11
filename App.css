@@ -2178,7 +2178,7 @@ html:not(.dark) h1,
 html:not(.dark) h2,
 html:not(.dark) h3,
 html:not(.dark) h4 {
-  color: #1e293b !important;
+  color: #fff !important;
   /* slate-800 */
   font-weight: 700;
 }
@@ -2474,4 +2474,261 @@ html.dark .fixed.inset-0.bg-black {
 select {
   border-radius: 12px !important;
   transition: all 0.3s ease !important;
+}
+
+/* ---------------------------------------------------------------------------------
+   7. PREMIUM LIGHT THEME OVERRIDES (High Contrast & Polish)
+   --------------------------------------------------------------------------------- */
+
+/* Global Background - remove plain white/gray, add depth */
+body,
+.app-container {
+  background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%) !important;
+  color: #0f172a;
+  /* Slate 900 for high contrast text */
+}
+
+/* Typography - Enforce High Contrast */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.text-gray-900,
+.text-gray-800 {
+  color: #0f172a !important;
+  /* Slate 900 */
+}
+
+p,
+span,
+div,
+li,
+.text-gray-600,
+.text-gray-500 {
+  color: #475569;
+  /* Slate 600 - much more readable than gray-500 */
+}
+
+/* Cards - Soft Elevated Look (Neomorphism-inspired) */
+.bg-white,
+.card,
+.rounded-2xl,
+.rounded-xl {
+  box-shadow: 0 10px 15px -3px rgba(148, 163, 184, 0.1),
+    0 4px 6px -2px rgba(148, 163, 184, 0.05) !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+  /* Slate 200 */
+}
+
+/* Hover effects for cards */
+.hover-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(148, 163, 184, 0.15),
+    0 10px 10px -5px rgba(148, 163, 184, 0.1) !important;
+  border-color: #cbd5e1 !important;
+  /* Slate 300 */
+}
+
+/* Inputs & Selects - Crisp & Visible */
+input,
+select,
+textarea {
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  /* Slate 300 */
+  color: #0f172a !important;
+  /* Slate 900 */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #3b82f6 !important;
+  /* Blue 500 */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+  background-color: #ffffff !important;
+}
+
+/* Tables - Readable & Organized */
+thead tr {
+  background-color: #f1f5f9 !important;
+  /* Slate 100 */
+  border-bottom: 2px solid #e2e8f0 !important;
+  /* Slate 200 */
+}
+
+th {
+  color: #334155 !important;
+  /* Slate 700 */
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+td {
+  color: #334155 !important;
+  /* Slate 700 */
+  border-bottom: 1px solid #f1f5f9 !important;
+}
+
+/* Badges & Status Indicators - Ensure visibility */
+.bg-green-100 {
+  background-color: #dcfce7 !important;
+  color: #15803d !important;
+  border: 1px solid #bbf7d0 !important;
+}
+
+.bg-blue-100 {
+  background-color: #dbeafe !important;
+  color: #1d4ed8 !important;
+  border: 1px solid #bfdbfe !important;
+}
+
+.bg-yellow-100 {
+  background-color: #fef9c3 !important;
+  color: #a16207 !important;
+  border: 1px solid #fde047 !important;
+}
+
+.bg-red-100 {
+  background-color: #fee2e2 !important;
+  color: #b91c1c !important;
+  border: 1px solid #fecaca !important;
+}
+
+/* Buttons - Pop */
+button.bg-white {
+  border: 1px solid #e2e8f0 !important;
+  color: #334155 !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+button.bg-white:hover {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+/* Sidebar fix re-affirmation (just in case) */
+aside {
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ---------------------------------------------------------------------------------
+   8. PREMIUM SIDEBAR POLISH (Fix for "Faint" text & "Sundar" Look)
+   --------------------------------------------------------------------------------- */
+/* Force absolute visibility and beauty for Sidebar elements */
+
+/* Brand Name "SONACOMSTAR" */
+/* Brand Name "SONACOMSTAR" */
+aside h1 {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.02em !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  font-size: 1.1rem !important;
+  /* Reduced to fit sidebar */
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* User Name */
+aside h3 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.01em;
+}
+
+/* Subtitles like "QC System" and User Role - Make them brighter */
+aside p,
+aside span,
+aside .text-slate-400 {
+  color: #cbd5e1 !important;
+  /* Slate 300 - Much brighter than 400 */
+}
+
+/* Add a premium glow to the Sidebar Border */
+aside {
+  border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 5px 0 25px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Make nav icons pop */
+aside svg {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+/* Dark Mode EXCEPTIONS - Ensure these overrides rarely break dark mode */
+@media (prefers-color-scheme: dark) {
+  /* These rules will be handled by the .dark class in Tailwind, 
+      but since we used !important above, we need to protect Dark Mode.
+      In this app, 'dark' class is toggled manually on HTML/Body.
+   */
+}
+
+/* DARK MODE PROTECTION RESTORE */
+.dark body,
+.dark .app-container {
+  background: #0f172a !important;
+  /* Slate 900 */
+  color: #f8fafc !important;
+  background-image: none !important;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark .text-white,
+.dark .text-gray-100 {
+  color: #ffffff !important;
+}
+
+.dark p,
+.dark span,
+.dark div,
+.dark li,
+.dark .text-slate-400,
+.dark .text-gray-400 {
+  color: #94a3b8 !important;
+  /* Slate 400 */
+}
+
+.dark .bg-white,
+.dark .bg-slate-800 {
+  background-color: #1e293b !important;
+  /* Slate 800 */
+  border-color: #334155 !important;
+  /* Slate 700 */
+  box-shadow: none !important;
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: #0f172a !important;
+  border-color: #334155 !important;
+  color: #ffffff !important;
+}
+
+.dark thead tr {
+  background-color: #1e293b !important;
+  border-bottom-color: #334155 !important;
+}
+
+.dark th {
+  color: #94a3b8 !important;
+}
+
+.dark td {
+  color: #cbd5e1 !important;
+  border-bottom-color: #334155 !important;
 }

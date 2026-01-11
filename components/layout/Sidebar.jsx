@@ -31,23 +31,23 @@ const Sidebar = ({
   return (
     <>
       {/* Desktop Sidebar - Always visible on PC */}
-      <aside className="hidden lg:flex fixed left-0 top-0 bottom-0 z-30 w-64 bg-gradient-to-b from-blue-900 via-blue-800 to-indigo-900 text-white shadow-2xl">
+      <aside className="hidden lg:flex fixed left-0 top-0 bottom-0 z-30 w-64 bg-slate-900 border-r border-slate-800 text-white shadow-2xl">
         <div className="h-full w-full flex flex-col">
           {/* Logo Section */}
-          <div className="p-6 border-b border-blue-700/50">
+          <div className="p-6 border-b border-slate-800">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg overflow-hidden">
-                <img src="/sonacomsterlogo.png" alt="Sona Comstar" className="w-full h-full object-contain p-1" />
+              <div className="w-16 h-16 bg-transparent rounded-xl flex items-center justify-center shrink-0">
+                <img src="/sonacomsterlogo.png" alt="Sona Comstar" className="w-full h-full object-contain p-0.5" />
               </div>
               <div>
                 <h1 className="text-xl font-bold tracking-tight text-white">SONACOMSTAR</h1>
-                <p className="text-[10px] text-blue-300 uppercase tracking-widest mt-1">QC System</p>
+                <p className="text-[10px] text-slate-400 uppercase tracking-widest mt-1">QC System</p>
               </div>
             </div>
           </div>
 
           {/* User Profile - Clickable to go to Settings */}
-          <div className="p-4 border-b border-blue-700/50">
+          <div className="p-4 border-b border-slate-800">
             <button
               onClick={() => setActiveTab('settings')}
               className="w-full flex items-center space-x-3 p-2 rounded-xl hover:bg-white/10 transition-all duration-200 group text-left"
@@ -64,7 +64,7 @@ const Sidebar = ({
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="font-semibold text-white truncate group-hover:text-cyan-300 transition-colors">{user?.name || "User"}</h3>
-                <p className="text-sm text-blue-300 truncate">{user?.role || "Role"}</p>
+                <p className="text-sm text-slate-400 truncate">{user?.role || "Role"}</p>
                 <div className="flex items-center mt-0.5">
                   <Settings size={12} className="text-blue-400 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                   <p className="text-xs text-blue-400 truncate opacity-60 group-hover:opacity-100 transition-opacity">Edit Profile</p>
@@ -95,7 +95,7 @@ const Sidebar = ({
                       }`}>
                       <IconComponent
                         size={20}
-                        className={isActive ? 'text-blue-600' : 'text-blue-300'}
+                        className={isActive ? 'text-blue-600' : 'text-slate-400'}
                       />
                     </div>
                     <span className="font-medium text-white">{item.label}</span>
@@ -114,24 +114,24 @@ const Sidebar = ({
           {/* System Status & Logout */}
           <div className="mt-auto">
             {/* System Status */}
-            <div className="p-4 border-t border-blue-700/50">
+            <div className="p-4 border-t border-slate-800">
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center space-x-2">
                   <Activity size={14} className="text-green-400" />
-                  <span className="text-xs text-blue-300">System Status</span>
+                  <span className="text-xs text-slate-400">System Status</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
                   <span className="text-xs text-green-400">Live</span>
                 </div>
               </div>
-              <div className="w-full bg-blue-800 rounded-full h-1.5">
+              <div className="w-full bg-slate-800 rounded-full h-1.5">
                 <div className="bg-gradient-to-r from-green-400 to-cyan-400 h-1.5 rounded-full" style={{ width: '98%' }}></div>
               </div>
             </div>
 
             {/* Logout Button */}
-            <div className="p-4 border-t border-blue-700/50">
+            <div className="p-4 border-t border-slate-800">
               <button
                 onClick={handleLogout}
                 className="w-full flex items-center justify-center space-x-2 p-3 bg-gradient-to-r from-red-500/90 to-pink-600/90 hover:from-red-600 hover:to-pink-700 rounded-xl transition-all duration-300 shadow-lg hover:shadow-red-500/20 group"
@@ -145,17 +145,17 @@ const Sidebar = ({
       </aside>
 
       {/* Mobile Sidebar Overlay - Only on mobile */}
-      <aside className={`lg:hidden fixed inset-y-0 left-0 z-50 w-64 bg-gradient-to-b from-blue-900 to-indigo-900 text-white transform ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300`}>
+      <aside className={`lg:hidden fixed inset-y-0 left-0 z-50 w-64 bg-slate-900 text-white transform ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300`}>
         <div className="h-full flex flex-col">
           {/* Logo Section */}
           <div className="p-6 border-b border-blue-800">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center overflow-hidden">
-                <img src="/sonacomsterlogo.png" alt="Sona Comstar" className="w-full h-full object-contain p-1" />
+              <div className="w-16 h-16 bg-transparent rounded-xl flex items-center justify-center shrink-0">
+                <img src="/sonacomsterlogo.png" alt="Sona Comstar" className="w-full h-full object-contain p-0.5" />
               </div>
               <div>
                 <h1 className="text-xl font-bold tracking-tight text-white">SONACOMSTAR</h1>
-                <p className="text-xs text-blue-300 uppercase tracking-widest mt-1">QC System v2.0</p>
+                <p className="text-xs text-slate-400 uppercase tracking-widest mt-1">QC System v2.0</p>
               </div>
             </div>
           </div>
@@ -172,7 +172,7 @@ const Sidebar = ({
               </div>
               <div>
                 <h3 className="font-semibold text-white">{user?.name || "User"}</h3>
-                <p className="text-sm text-blue-300">{user?.role || "Role"}</p>
+                <p className="text-sm text-slate-400">{user?.role || "Role"}</p>
               </div>
             </div>
           </div>
@@ -196,7 +196,7 @@ const Sidebar = ({
                   <div className="flex items-center space-x-3">
                     <IconComponent
                       size={20}
-                      className={activeTab === item.id ? 'text-cyan-300' : 'text-blue-300'}
+                      className={activeTab === item.id ? 'text-cyan-300' : 'text-slate-400'}
                     />
                     <span className="font-medium">{item.label}</span>
                   </div>
