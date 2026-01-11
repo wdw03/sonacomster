@@ -65,8 +65,8 @@ const LoginPage = ({ onLogin }) => {
 
           {/* Header */}
           <div className="relative z-10 text-center mb-10">
-            <div className="inline-flex items-center justify-center w-32 h-32 bg-white rounded-3xl mb-6 shadow-lg shadow-blue-500/30 transform transition-transform group-hover:scale-105 group-hover:rotate-1 overflow-hidden p-3">
-              <img src="/sonacomsterlogo.png" alt="Sona Comstar" className="w-full h-full object-contain" />
+            <div className="inline-flex items-center justify-center w-32 h-32 bg-transparent rounded-3xl mb-6 shadow-lg shadow-blue-500/30 transform transition-transform group-hover:scale-105 group-hover:rotate-1 overflow-visible p-3">
+              <img src="/sonacomsterlogo.png" alt="Sona Comstar" className="w-full h-full object-contain drop-shadow-lg" />
             </div>
             <h1 className="text-3xl font-extrabold tracking-tight text-white mb-2">
               Welcome Back

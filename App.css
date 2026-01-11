@@ -2178,8 +2178,8 @@ html:not(.dark) h1,
 html:not(.dark) h2,
 html:not(.dark) h3,
 html:not(.dark) h4 {
-  color: #fff !important;
-  /* slate-800 */
+  color: #0f172a !important;
+  /* Fixed: Was white, now Dark Slate for visibility */
   font-weight: 700;
 }
 
@@ -2619,25 +2619,29 @@ aside {
 }
 
 /* ---------------------------------------------------------------------------------
-   8. PREMIUM SIDEBAR POLISH (Fix for "Faint" text & "Sundar" Look)
+   8. PREMIUM SIDEBAR POLISH (Always Dark & White Text)
    --------------------------------------------------------------------------------- */
-/* Force absolute visibility and beauty for Sidebar elements */
 
-/* Brand Name "SONACOMSTAR" */
-/* Brand Name "SONACOMSTAR" */
+/* 1. Force Sidebar Background to be Dark (Slate 900) */
+aside {
+  background-color: #0f172a !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 5px 0 25px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 2. Brand Name "SONACOMSTAR" - Pure White (#fff) */
 aside h1 {
   color: #ffffff !important;
   font-weight: 800 !important;
   letter-spacing: 0.02em !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
   font-size: 1.1rem !important;
-  /* Reduced to fit sidebar */
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
 }
 
-/* User Name */
+/* 3. User Name "Saransh Kushwaah" - Pure White (#fff) */
 aside h3 {
   color: #ffffff !important;
   font-weight: 700 !important;
@@ -2645,18 +2649,18 @@ aside h3 {
   letter-spacing: 0.01em;
 }
 
-/* Subtitles like "QC System" and User Role - Make them brighter */
+/* 4. Subtitles (Role, System) - Light Slate for Contrast */
 aside p,
 aside span,
 aside .text-slate-400 {
   color: #cbd5e1 !important;
-  /* Slate 300 - Much brighter than 400 */
+  /* Slate 300 */
 }
 
-/* Add a premium glow to the Sidebar Border */
-aside {
-  border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 5px 0 25px rgba(0, 0, 0, 0.2) !important;
+/* 5. Icons - White/Light */
+aside svg {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+  color: #cbd5e1 !important;
 }
 
 /* Make nav icons pop */
