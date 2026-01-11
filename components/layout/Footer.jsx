@@ -12,7 +12,7 @@ const Footer = () => {
               © {currentYear} SONACOMSTAR Quality Control System. All rights reserved.
             </p>
             <p className="text-xs text-gray-500 mt-1">
-              Version 2.0.1 • Last updated: January 2024
+              Version 2.0.1 • Last updated: January 2026
             </p>
           </div>
           <div className="mt-2 md:mt-0 flex justify-center md:justify-end space-x-4">
